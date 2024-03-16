@@ -2,34 +2,6 @@ import pandas as pd
 import numpy as np
 import openai
 import matplotlib.pyplot as plt
-openai.api_key='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'
-
-import subprocess
-import sys
-
-def create_virtual_environment():
-    subprocess.run([sys.executable, '-m', 'venv', 'openai_env'])
-
-def install_latest_openai():
-    subprocess.run(['source', 'openai_env/bin/activate'])
-
-    subprocess.run(['pip', 'install', '--upgrade', 'openai'])
-
-def main():
-    create_virtual_environment()
-
-    install_latest_openai()
-
-    subprocess.run(['source', 'openai_env/bin/activate'])
-
-    import openai
-    print("OpenAI version:", openai.__version__)
-
-if __name__ == "__main__":
-    main()
-
-
-
 
 def get_completion(prompt, model="gpt-3.5-turbo",temperature=0): # Andrew mentioned that the prompt/ completion paradigm is preferable for this class
     messages = [
