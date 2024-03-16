@@ -1,4 +1,3 @@
-#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
 import matplotlib.pyplot as plt
 import pandas as pd
 from wordcloud import WordCloud
