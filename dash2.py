@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def generate_dashboard(df):
-    sentiment_fig_path = "images/sentiment_fig.png"
-    facebook_fig_path = "images/facebook_fig.png"
-    instagram_fig_path = "images/instagram_fig.png"
-    twitter_fig_path = "images/twitter_fig.png"
-    youtube_fig_path = "images/youtube_fig.png"
+    sentiment_fig_path = "sentiment_fig.png"
+    facebook_fig_path = "facebook_fig.png"
+    instagram_fig_path = "instagram_fig.png"
+    twitter_fig_path = "twitter_fig.png"
+    youtube_fig_path = "youtube_fig.png"
     linkedin_fig_path = "linkedin_fig.png"
     
     plot_piechart(df, 'Sentiment', sentiment_fig_path)

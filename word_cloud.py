@@ -4,12 +4,12 @@ from wordcloud import WordCloud
 
 
 def generate_word_cloud(df):
-    Content_fig_path = "images/Content_fig_wc.png"
-    facebook_fig_path = "images/facebook_fig_wc.png"
-    instagram_fig_path = "images/instagram_fig_wc.png"
-    twitter_fig_path = "images/twitter_fig_wc.png"
-    youtube_fig_path = "images/youtube_fig_wc.png"
-    linkedin_fig_path = "images/linkedin_fig_wc.png"
+    Content_fig_path= "Content_fig_wc.png"
+    facebook_fig_path = "facebook_fig_wc.png"
+    instagram_fig_path = "instagram_fig_wc.png"
+    twitter_fig_path = "twitter_fig_wc.png"
+    youtube_fig_path = "youtube_fig_wc.png"
+    linkedin_fig_path = "linkedin_fig_wc.png"
     
     wrod(df['Content'], Content_fig_path)
     wrod(df[df['Source']=='Facebook.com']['Content'], facebook_fig_path)
