@@ -37,15 +37,16 @@ def generate_suggestions(api_key,data):
 
     for sentiment in dict_obt.keys():
         prompt =  f""" 
-As a business insights expert at Fino Payments Bank.\
-You have been given a dataset which has negative, positive, constructive and neutral feedbacks in comments section of different social media platfrom in which Fino Payments Bank is active.\
-You are given a task to analyse the {sentiment} \
-You must read, remember and analyse all the comments in this section\
-After reading them you must present the top 5 findings related to the sentiment\
-It should reflect the sentiment of the people, what they feel\
-Also, from the analysis you must give a percentage stat of how many comments from the total think the same\
-These top 5 most popular talks will be noted by the Directors of the company and will be addressed\
-Make sure you return only and only 5 points, thats it and that too in bullet points
+As a business insights expert at Fino Payments Bank, you have been tasked with analyzing the {sentiment} feedback received from various social media platforms where Fino Payments Bank is active. The dataset contains comments categorized as negative, positive, constructive, or neutral.\
+
+Your objective is to thoroughly analyze the {sentiment} feedback by reading, memorizing, and interpreting all comments in this category. After analysis, you are required to present the top 5 insights derived from the sentiment. These insights should reflect the prevailing sentiment of the people and provide a deeper understanding of their feelings.\
+
+Furthermore, for each insight, you must provide a percentage stat indicating the proportion of comments expressing the same sentiment out of the total comments analyzed. For example, "35% of the total positive comments expressed satisfaction with the user interface (UI)."\
+
+The top 5 insights will be compiled as bullet points and presented to the Directors of the company for review and action.\
+
+Please ensure that your analysis is concise and focuses on the most significant findings. Limit your output to only 5 bullet points, each accompanied by its respective percentage stat.\
+
 """
         response = get_completion(prompt)
         list_response.append(response)
