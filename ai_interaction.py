@@ -37,7 +37,7 @@ def generate_suggestions(api_key,data):
 
     for sentiment in dict_obt.keys():
         prompt =  f""" 
-As a business insights expert at Fino Payments Bank, you have been tasked with analyzing the {sentiment} feedback received from various social media platforms where Fino Payments Bank is active. The dataset contains comments categorized as negative, positive, constructive, or neutral.\
+As a business insights expert at Fino Payments Bank, you have been tasked with analyzing the {sentiment} feedback received from various social media platforms where Fino Payments Bank is active. The dataset contains comments categorized as {sentiment}.\
 
 Your objective is to thoroughly analyze the {sentiment} feedback by reading, memorizing, and interpreting all comments in this category. After analysis, you are required to present the top 5 insights derived from the sentiment. These insights should reflect the prevailing sentiment of the people and provide a deeper understanding of their feelings.\
 
