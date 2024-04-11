@@ -1,8 +1,6 @@
 # Generating a script to upload a file and use perform comment analysis on the same file
 import streamlit as st
 from data_processing import process_csv_file
-from word_cloud import generate_word_cloud
-from dash2 import generate_dashboard
 from ai_interaction import generate_suggestions
 import pandas as pd
 
@@ -17,35 +15,6 @@ def main():
         api_key = st.text_input("Enter your API key")
 
         df = process_csv_file(uploaded_file)
-
-        st.subheader("Dashboard for all applications")
-        sentiment_fig, facebook_fig, instagram_fig, twitter_fig, youtube_fig, linkedin_fig = generate_dashboard(df)
-
-        # Create a 3x3 grid layout
-        row1 = st.columns(3)
-        row2 = st.columns(3)
-
-        # Place charts in the grid
-        for col, fig, header in zip(row1 + row2, [sentiment_fig,twitter_fig, facebook_fig, instagram_fig, linkedin_fig, youtube_fig], ["Cummulative","Twitter", "Facebook", "Instagram", "LinkedIn", "YouTube"]):
-            with col:
-                st.header(header)
-                st.image(fig)
-        
-
-
-        st.subheader("WordCloud for all applications")
-        content_fig_Wc, facebook_fig_Wc, instagram_fig_Wc, twitter_fig_Wc, youtube_fig_Wc, linkedin_fig_Wc = generate_word_cloud(df)
-
-        # Create a 3x3 grid layout
-        row1 = st.columns(3)
-        row2 = st.columns(3)
-
-        # Place charts in the grid
-        for col, fig, header in zip(row1 + row2, [content_fig_Wc,twitter_fig_Wc, facebook_fig_Wc, instagram_fig_Wc, linkedin_fig_Wc, youtube_fig_Wc], ["Cummulative","Twitter", "Facebook", "Instagram", "LinkedIn", "YouTube"]):
-            with col:
-                st.header(header)
-                st.image(fig)
-
         # Generate Suggestions
         st.subheader("AI Suggestions")
         suggestions = generate_suggestions(api_key, df)
