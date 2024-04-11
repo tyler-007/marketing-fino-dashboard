@@ -10,11 +10,11 @@ def generate_dashboard(df):
     linkedin_fig_path = "images/linkedin_fig.png"
     
     plot_piechart(df, 'Sentiment', sentiment_fig_path)
-    plot_piechart(df[df['Source']=='Facebook.com'], 'Sentiment', facebook_fig_path)
-    plot_piechart(df[df['Source']=='Forums'], 'Sentiment', instagram_fig_path)
-    plot_piechart(df[df['Source']=='Twitter.com'], 'Sentiment', twitter_fig_path)
-    plot_piechart(df[df['Source']=='youtube.com'], 'Sentiment', youtube_fig_path)
-    plot_piechart(df[df['Source']=='linkedin'], 'Sentiment', linkedin_fig_path)
+    plot_piechart(df[df['Source']=='Facebook'], 'Sentiment', facebook_fig_path)
+    plot_piechart(df[df['Source']=='Instagram'], 'Sentiment', instagram_fig_path)
+    plot_piechart(df[df['Source']=='Twitter'], 'Sentiment', twitter_fig_path)
+    plot_piechart(df[df['Source']=='Youtube'], 'Sentiment', youtube_fig_path)
+    plot_piechart(df[df['Source']=='Fourms'], 'Sentiment', linkedin_fig_path)
 
     return sentiment_fig_path, facebook_fig_path, instagram_fig_path, twitter_fig_path, youtube_fig_path, linkedin_fig_path
 '''

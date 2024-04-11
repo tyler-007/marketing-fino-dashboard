@@ -12,11 +12,11 @@ def generate_word_cloud(df):
     linkedin_fig_path = "images/linkedin_fig_wc.png"
     
     wrod(df['Content'], Content_fig_path)
-    wrod(df[df['Source']=='Facebook.com']['Content'], facebook_fig_path)
-    wrod(df[df['Source']=='Forums']['Content'], instagram_fig_path)
-    wrod(df[df['Source']=='Twitter.com']['Content'], twitter_fig_path)
-    wrod(df[df['Source']=='youtube.com']['Content'], youtube_fig_path)
-    wrod(df[df['Source']=='linkedin']['Content'], linkedin_fig_path)
+    wrod(df[df['Source']=='Facebook']['Content'], facebook_fig_path)
+    wrod(df[df['Source']=='Instagram']['Content'], instagram_fig_path)
+    wrod(df[df['Source']=='Twitter']['Content'], twitter_fig_path)
+    wrod(df[df['Source']=='Youtube']['Content'], youtube_fig_path)
+    wrod(df[df['Source']=='Fourms']['Content'], linkedin_fig_path)
 
     return Content_fig_path, facebook_fig_path, instagram_fig_path, twitter_fig_path, youtube_fig_path, linkedin_fig_path
 
